@@ -1,0 +1,144 @@
+.admin-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f8fc;
+}
+
+.admin-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  color: white;
+  padding: 28px 18px 20px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 9px 30px;
+}
+
+.sidebar-brand-mark {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #6366f1;
+  font-weight: 700;
+}
+
+.sidebar-brand h1 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.sidebar-brand p {
+  margin: 3px 0 0;
+  color: #8993a8;
+  font-size: 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sidebar-section-label {
+  color: #687386;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 0 12px 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 9px;
+  color: #aeb6c5;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.15s ease;
+}
+
+.sidebar-link:hover {
+  color: white;
+  background: #1c2535;
+}
+
+.sidebar-link.active {
+  color: white;
+  background: #293347;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #273143;
+  padding-top: 15px;
+}
+
+.logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #aeb6c5;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.logout-button:hover {
+  color: white;
+  background: #1c2535;
+}
+
+.admin-main {
+  margin-left: 255px;
+  width: calc(100% - 255px);
+  min-height: 100vh;
+  padding: 36px;
+}
+
+@media (max-width: 800px) {
+  .admin-sidebar {
+    width: 75px;
+  }
+
+  .sidebar-brand h1,
+  .sidebar-brand p,
+  .sidebar-link span,
+  .logout-button span,
+  .sidebar-section-label {
+    display: none;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-link,
+  .logout-button {
+    justify-content: center;
+  }
+
+  .admin-main {
+    margin-left: 75px;
+    width: calc(100% - 75px);
+    padding: 22px;
+  }
+}
