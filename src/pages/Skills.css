@@ -1,0 +1,187 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  padding: 20px;
+  border: 1px solid #e5e7ed;
+  border-radius: 14px;
+  background: white;
+}
+
+.skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.skill-name-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.skill-name-row h3 {
+  margin: 0;
+  color: #1d2533;
+  font-size: 15px;
+}
+
+.skill-name-row svg {
+  color: #d89b24;
+}
+
+.skill-category {
+  display: block;
+  margin-top: 5px;
+  color: #8b94a5;
+  font-size: 10px;
+}
+
+.skill-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.skill-actions button,
+.icon-button {
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  background: white;
+  color: #697386;
+  cursor: pointer;
+}
+
+.skill-actions button:hover {
+  background: #f8fafc;
+  color: #111827;
+}
+
+.skill-actions button.delete:hover {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.skill-proficiency-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  color: #7c8598;
+  font-size: 10px;
+}
+
+.skill-proficiency-row strong {
+  color: #374151;
+}
+
+.skill-progress {
+  height: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: #eef0f4;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #111827;
+}
+
+.skill-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  padding-top: 14px;
+  border-top: 1px solid #eef0f4;
+  color: #929aaa;
+  font-size: 9px;
+}
+
+.skill-form-card {
+  margin-bottom: 22px;
+}
+
+.skill-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eceef3;
+}
+
+.skill-form-header h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.skill-form-header p {
+  margin: 6px 0 0;
+  color: #929aaa;
+  font-size: 11px;
+}
+
+.skill-range {
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.checkbox-field {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 9px !important;
+  cursor: pointer;
+}
+
+.checkbox-field input {
+  width: auto;
+}
+
+.secondary-action {
+  min-height: 42px;
+  margin-right: 8px;
+  padding: 0 17px;
+  border: 1px solid #dfe3eb;
+  border-radius: 9px;
+  background: white;
+  color: #4b5563;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.skills-empty {
+  grid-column: 1 / -1;
+  padding: 50px;
+  border: 1px dashed #d9dde5;
+  border-radius: 14px;
+  background: white;
+  text-align: center;
+}
+
+.skills-empty h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.skills-empty p {
+  margin: 7px 0 0;
+  color: #929aaa;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

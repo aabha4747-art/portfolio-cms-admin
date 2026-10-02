@@ -1,0 +1,118 @@
+.project-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.editor-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #697386;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.editor-back:hover {
+  color: #111827;
+}
+
+.slug-row,
+.tag-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.slug-row input,
+.tag-input-row input {
+  flex: 1;
+}
+
+.slug-row button,
+.tag-input-row button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 14px;
+  border: 1px solid #dfe3eb;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.tag-editor-section + .tag-editor-section {
+  margin-top: 25px;
+}
+
+.tag-editor-section > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.tag-input-row input {
+  border: 1px solid #dfe3eb;
+  border-radius: 9px;
+  outline: none;
+  padding: 12px 13px;
+  font-size: 12px;
+}
+
+.tag-input-row input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.09);
+}
+
+.editor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.editor-tags > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px 6px 10px;
+  border-radius: 7px;
+  background: #f1f3f6;
+  color: #4b5563;
+  font-size: 10px;
+}
+
+.editor-tags button {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #8992a3;
+  cursor: pointer;
+}
+
+.editor-tags button:hover {
+  color: #dc2626;
+}
+
+.project-save-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -5px 20px rgba(15, 23, 42, 0.04);
+}

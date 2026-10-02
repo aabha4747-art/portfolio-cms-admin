@@ -1,0 +1,182 @@
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-admin-card {
+  overflow: hidden;
+  border: 1px solid #e3e7ee;
+  border-radius: 14px;
+  background: white;
+}
+
+.project-admin-main {
+  padding: 21px 23px 18px;
+}
+
+.project-admin-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-title-row h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 16px;
+}
+
+.project-star {
+  color: #d99a22;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 7px;
+  color: #8a94a6;
+  font-size: 10px;
+}
+
+.project-description {
+  max-width: 900px;
+  margin: 17px 0 14px;
+  color: #687386;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tech-list span {
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #f2f4f7;
+  color: #566174;
+  font-size: 9px;
+}
+
+.project-admin-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.project-admin-actions button {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e6ed;
+  border-radius: 7px;
+  background: white;
+  color: #657084;
+  cursor: pointer;
+}
+
+.project-admin-actions button:hover {
+  background: #f8fafc;
+  color: #111827;
+}
+
+.project-admin-actions button.delete:hover {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.project-admin-footer {
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 23px;
+  border-top: 1px solid #edf0f4;
+  background: #fbfcfd;
+}
+
+.project-statuses,
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-badge {
+  padding: 5px 8px;
+  border-radius: 100px;
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.status-badge.published {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.status-badge.draft {
+  background: #f2f4f7;
+  color: #687386;
+}
+
+.status-badge.featured {
+  background: #fff8e8;
+  color: #a16207;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #586276;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  color: #111827;
+}
+
+.projects-empty {
+  padding: 55px;
+  border: 1px dashed #d8dde6;
+  border-radius: 14px;
+  background: white;
+  text-align: center;
+}
+
+.projects-empty h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.projects-empty p {
+  margin: 7px 0 0;
+  color: #929aaa;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  .project-admin-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-admin-heading {
+    align-items: flex-start;
+  }
+}

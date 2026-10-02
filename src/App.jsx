@@ -7,27 +7,49 @@ import {
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import ProjectEditor from "./pages/ProjectEditor";
 import ComingSoon from "./pages/ComingSoon";
 
 function ProtectedRoute({ children }) {
-  const token = localStorage.getItem("portfolio_admin_token");
+  const token = localStorage.getItem(
+    "portfolio_admin_token"
+  );
 
   if (!token) {
-    return <Navigate to="/login" replace />;
+    return (
+      <Navigate
+        to="/login"
+        replace
+      />
+    );
   }
 
   return children;
 }
 
 function ProtectedPage({ children }) {
-  return <ProtectedRoute>{children}</ProtectedRoute>;
+  return (
+    <ProtectedRoute>
+      {children}
+    </ProtectedRoute>
+  );
 }
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        {/* LOGIN */}
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        {/* DASHBOARD */}
 
         <Route
           path="/dashboard"
@@ -38,10 +60,60 @@ function App() {
           }
         />
 
+        {/* ABOUT */}
+
+        <Route
+          path="/about"
+          element={
+            <ProtectedPage>
+              <About />
+            </ProtectedPage>
+          }
+        />
+
+        {/* SKILLS */}
+
+        <Route
+          path="/skills"
+          element={
+            <ProtectedPage>
+              <Skills />
+            </ProtectedPage>
+          }
+        />
+
+        {/* PROJECTS */}
+
+        <Route
+          path="/projects"
+          element={
+            <ProtectedPage>
+              <Projects />
+            </ProtectedPage>
+          }
+        />
+
+        <Route
+          path="/projects/new"
+          element={
+            <ProtectedPage>
+              <ProjectEditor />
+            </ProtectedPage>
+          }
+        />
+
+        <Route
+          path="/projects/edit/:id"
+          element={
+            <ProtectedPage>
+              <ProjectEditor />
+            </ProtectedPage>
+          }
+        />
+
+        {/* REMAINING CMS PAGES */}
+
         {[
-          "/about",
-          "/skills",
-          "/projects",
           "/experience",
           "/blogs",
           "/testimonials",
@@ -60,8 +132,27 @@ function App() {
           />
         ))}
 
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        {/* DEFAULT ROUTES */}
+
+        <Route
+          path="/"
+          element={
+            <Navigate
+              to="/dashboard"
+              replace
+            />
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <Navigate
+              to="/dashboard"
+              replace
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
