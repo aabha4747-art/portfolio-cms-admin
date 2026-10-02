@@ -11,6 +11,12 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import ProjectEditor from "./pages/ProjectEditor";
+
+import Experience from "./pages/Experience";
+import Blogs from "./pages/Blogs";
+import Testimonials from "./pages/Testimonials";
+import Services from "./pages/Services";
+
 import ComingSoon from "./pages/ComingSoon";
 
 function ProtectedRoute({ children }) {
@@ -111,16 +117,53 @@ function App() {
           }
         />
 
-        {/* REMAINING CMS PAGES */}
+        {/* EXPERIENCE */}
 
-        {[
-          "/experience",
-          "/blogs",
-          "/testimonials",
-          "/services",
-          "/media",
-          "/github",
-        ].map((path) => (
+        <Route
+          path="/experience"
+          element={
+            <ProtectedPage>
+              <Experience />
+            </ProtectedPage>
+          }
+        />
+
+        {/* BLOGS */}
+
+        <Route
+          path="/blogs"
+          element={
+            <ProtectedPage>
+              <Blogs />
+            </ProtectedPage>
+          }
+        />
+
+        {/* TESTIMONIALS */}
+
+        <Route
+          path="/testimonials"
+          element={
+            <ProtectedPage>
+              <Testimonials />
+            </ProtectedPage>
+          }
+        />
+
+        {/* SERVICES */}
+
+        <Route
+          path="/services"
+          element={
+            <ProtectedPage>
+              <Services />
+            </ProtectedPage>
+          }
+        />
+
+        {/* PENDING CMS PAGES */}
+
+        {["/media", "/github"].map((path) => (
           <Route
             key={path}
             path={path}
