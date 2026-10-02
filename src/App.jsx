@@ -16,8 +16,9 @@ import Experience from "./pages/Experience";
 import Blogs from "./pages/Blogs";
 import Testimonials from "./pages/Testimonials";
 import Services from "./pages/Services";
+import Media from "./pages/Media";
+import GitHubImport from "./pages/GitHubImport";
 
-import ComingSoon from "./pages/ComingSoon";
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem(
@@ -161,19 +162,25 @@ function App() {
           }
         />
 
-        {/* PENDING CMS PAGES */}
+        <Route
+  path="/media"
+  element={
+    <ProtectedPage>
+      <Media />
+    </ProtectedPage>
+  }
+/>
 
-        {["/media", "/github"].map((path) => (
-          <Route
-            key={path}
-            path={path}
-            element={
-              <ProtectedPage>
-                <ComingSoon />
-              </ProtectedPage>
-            }
-          />
-        ))}
+<Route
+  path="/github"
+  element={
+    <ProtectedPage>
+      <GitHubImport />
+    </ProtectedPage>
+  }
+/>
+
+        
 
         {/* DEFAULT ROUTES */}
 

@@ -208,3 +208,284 @@
     grid-column: auto;
   }
 }
+
+/* =========================
+   MEDIA LIBRARY
+========================= */
+
+.media-upload-panel {
+  margin-top: 28px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e3e7ef;
+  border-radius: 14px;
+}
+
+.media-upload-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.media-upload-title strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #172033;
+}
+
+.media-upload-title p {
+  margin: 0;
+  color: #7c879b;
+  font-size: 13px;
+}
+
+.media-upload-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.media-upload-fields input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dce1ea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.media-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0 18px;
+}
+
+.media-section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.media-section-heading span {
+  color: #8a94a7;
+  font-size: 12px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.media-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e7ef;
+  border-radius: 12px;
+}
+
+.media-preview {
+  height: 190px;
+  background: #edf0f6;
+}
+
+.media-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card-content {
+  padding: 16px;
+}
+
+.media-card-content > strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.media-card-content > p {
+  margin: 6px 0 0;
+  color: #8a94a7;
+  font-size: 12px;
+}
+
+.media-alt {
+  min-height: 18px;
+}
+
+.media-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.media-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid #dce1ea;
+  border-radius: 7px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.media-actions .danger {
+  color: #d14343;
+}
+
+/* =========================
+   GITHUB IMPORT
+========================= */
+
+.github-header {
+  align-items: center;
+}
+
+.github-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin: 25px 0;
+  padding: 18px;
+  background: #f0f1ff;
+  border: 1px solid #dfe1ff;
+  border-radius: 10px;
+}
+
+.github-info strong {
+  color: #252a48;
+}
+
+.github-info p {
+  margin: 5px 0 0;
+  color: #6e7890;
+  font-size: 13px;
+}
+
+.github-repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.github-repo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e6ee;
+  border-radius: 12px;
+}
+
+.github-repo-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.github-repo-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #eef0ff;
+  color: #6266f1;
+  border-radius: 9px;
+}
+
+.github-repo-main h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.github-repo-main p {
+  max-width: 650px;
+  margin: 0;
+  color: #798397;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.github-repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.github-repo-meta span {
+  padding: 4px 7px;
+  background: #f2f4f7;
+  color: #697386;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.github-repo-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   SHARED
+========================= */
+
+.crud-message {
+  margin: 18px 0;
+  padding: 12px 15px;
+  background: #eef0ff;
+  border: 1px solid #dfe1ff;
+  border-radius: 8px;
+  color: #484db5;
+  font-size: 13px;
+}
+
+.crud-empty {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #d7dce5;
+  border-radius: 12px;
+  color: #8993a5;
+}
+
+.crud-empty h3 {
+  margin: 12px 0 5px;
+  color: #333b4c;
+}
+
+.crud-empty p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-upload-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .github-repo-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
