@@ -1,23 +1,22 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL:
+    import.meta.env.VITE_API_URL ||
+    "https://portfolio-cms-backend-3yrq.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-api.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem("portfolio_admin_token");
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("portfolio_admin_token");
 
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
 
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
+  return config;
+});
 
 export default api;
